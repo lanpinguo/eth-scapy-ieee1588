@@ -323,9 +323,9 @@ class ieee1588v2_Management(ieee1588v2_Header):
         PacketField('targetPortIdentity', PortIdentity(), PortIdentity),
         ByteField('startingBoundaryHops', 0),
         ByteField('boundaryHops', 0),
-        BitField('reserved0', None, 4),
+        #BitField('reserved0', None, 4),
         BitField('actionField', 0, 4),
-        ByteField('reserved1', None),
+        #ByteField('reserved1', None),
         PacketListField("TLV", None, ieee1588v2_TLV_Follow_Up, length_from = lambda pkt:pkt.messageLength - 48),
     ]
 
